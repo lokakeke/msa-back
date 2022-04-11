@@ -16,3 +16,11 @@ server:
 sms:
   exam:
     url: 'http://localhost:9020'
+
+
+# feign fallbackfactory 실행
+feign:
+  circuitbreaker:
+    enabled: true
+
+

@@ -27,9 +27,13 @@ public class ExamController {
     }
 
     @PostMapping("/api/sms/exam/setMessage")
-    public ResponseEntity<Sms> setMessage(@Valid @RequestBody Sms params) {
+    public ResponseEntity<Sms> setMessage(@Valid @RequestBody Sms params) throws Exception {
 
         log.info("setTicket Info : {}" , params.toString());
+
+        if(true) {
+            throw new Exception("오류 발생....");
+        }
 
         return ResponseEntity.status(HttpStatus.OK).header(null).body(params);
     }

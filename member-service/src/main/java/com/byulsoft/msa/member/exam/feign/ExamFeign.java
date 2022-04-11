@@ -46,7 +46,8 @@ class ExamFeignClientFallbackFactory implements FallbackFactory<ExamFeign> {
 
             @Override
             public ResponseDto setMessage(Member param) {
-                log.error(cause.getMessage());
+
+                log.error("!!!!!!!!!!!!!!!!!!!!!!!!! error : {}", cause.getMessage());
 
                 ResponseDto result = new ResponseDto();
 

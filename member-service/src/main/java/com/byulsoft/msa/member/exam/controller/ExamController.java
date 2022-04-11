@@ -58,14 +58,7 @@ public class ExamController {
 
         log.info("setFeign Start : {}", params);
 
-        ResponseDto result = null;
-        try {
-             result = examFeign.setMessage(params);
-        } catch (FeignException e) {
-            e.printStackTrace();
-            result = new ResponseDto();
-            result.setMessage(e.getMessage());
-        }
+        ResponseDto result = examFeign.setMessage(params);
 
 
         log.info("setFeign End : {}", result);
